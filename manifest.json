@@ -1,0 +1,28 @@
+{
+    "name": "Change all icons to Tobu 8000 series (X)",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Xユーザーのアイコンを全て東武8000系にします",
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon_high.png",
+        "256": "icon_high.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "拡張機能の設定"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.x.com/*", "https://*.twitter.com/*"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["icon.png", "icon_high.png", "icon_high_circle.png"],
+        "matches": ["*://*/*"]
+    }],
+    "permissions": ["storage"]
+}

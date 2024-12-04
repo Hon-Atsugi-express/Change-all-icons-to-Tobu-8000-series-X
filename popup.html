@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        body {
+            width: 300px;
+            height: 150px;
+        }
+        #icon-detection-frequency-number-change-all-icons-to-tobu-8000-series-x {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>設定</h2>
+    <div>
+        アイコン変更を有効化
+        <input type="checkbox" id="icon-change-enable-checkbox-change-all-icons-to-tobu-8000-series-x">
+    </div>
+    <div>
+        アイコン検出頻度 (ms)
+        <input type="number" id="icon-detection-frequency-number-change-all-icons-to-tobu-8000-series-x" min="100" max="2000" step="10">
+    </div>
+    <div>
+        アイコン変更頻度 (個別) (ms)
+        <input type="number" id="icon-change-frequency-number-change-all-icons-to-tobu-8000-series-x" min="0" max="1000"><br>
+        <p style="font-weight: bold; font-size: 12px;">変更頻度は検出頻度より短くしないと無効になります</p>
+    </div>
+    <p style="font-weight: bold;">変更を適用するにはポップアップを閉じて再読み込みしてください。</p>
+    <script src="popup.js"></script>
+</body>
+</html>
